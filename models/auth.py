@@ -102,6 +102,7 @@ def login(user):
         else:
             flash = "Some Error Occured!"
             flag = 0
+            return flash,400
     if flag != 0:
         flash = ""
     if(user=="student"):
