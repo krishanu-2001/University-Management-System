@@ -4,6 +4,7 @@ from flask_mysqldb import MySQL
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask_mail import Mail
 from flask_mail import Message
+from werkzeug.utils import html
 
 # models
 import models.student as student
@@ -143,6 +144,12 @@ app.add_url_rule('/admin/course_student_delete/<student_id>', view_func=admin.ad
 app.add_url_rule('/admin/all_requests', view_func=admin.admin_inbox, methods=['GET','POST'])
 app.add_url_rule('/admin/accepted_requests', view_func=admin.admin_accepted_requests, methods=['GET','POST'])
 # admin end  
+
+# ERROR
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("/faculty_panel/error_404.html"),404
+
 
 if __name__ == '__main__':
     flag = 0

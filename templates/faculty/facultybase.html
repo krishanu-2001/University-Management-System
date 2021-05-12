@@ -11,7 +11,7 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image"
-        href="{{ url_for('static',filename='assets/Admin_assets/img/favicon.ico') }}">
+        href="{{ url_for('static',filename='assets/admin_assets/img/favicon.ico') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,500" rel='stylesheet'>
 
@@ -67,20 +67,24 @@
             <span class="collapse_menu--label"></span>
         </button>
         <div class="main_logo" id="logo">
-            <a href="/faculty/dashboard"><img src="{{ url_for('static',filename='assets/faculty_assets/images/logo1.png') }}" alt=""></a>
+            <a href="/faculty/dashboard"><img src="../../static/assets/faculty_assets/images/logo1.png" alt=""></a>
             <a href="/faculty/dashboard"><img class="logo-inverse"
-                    src="{{ url_for('static',filename='assets/faculty_assets/images/logo1.png') }}" alt=""></a>
+                    src="../../static/assets/faculty_assets/images/ct_logo.svg" alt=""></a>
         </div>
 
         <div class="header_right">
             <ul>
+                <li>
+                    <a href="/faculty/create_new_assignment" class="upload_btn">Create New Assignment</a>
+                </li>
+
 
                 <li class="ui dropdown">
                     <a href="#" class="option_links"><i class='uil uil-bell'></i><span class="noti_count">3</span></a>
                     <div class="menu dropdown_mn">
                         <a href="#" class="channel_my item">
                             <div class="profile_link">
-                                <img src="{{ url_for('static',filename='assets/faculty_assets/images/left-imgs/img-1.jpg') }}" alt="">
+                                <img src="../../static/assets/faculty_assets/images/left-imgs/img-1.jpg" alt="">
                                 <div class="pd_content">
                                     <h6>Rock William</h6>
                                     <p>Like Your Comment On Video <strong>How to create sidebar menu</strong>.</p>
@@ -90,7 +94,7 @@
                         </a>
                         <a href="#" class="channel_my item">
                             <div class="profile_link">
-                                <img src="{{ url_for('static',filename='assets/faculty_assets/images/left-imgs/img-2.jpg' )}}" alt="">
+                                <img src="../../static/assets/faculty_assets/images/left-imgs/img-2.jpg" alt="">
                                 <div class="pd_content">
                                     <h6>Jassica Smith</h6>
                                     <p>Added New Review In Video <strong>Full Stack PHP Developer</strong>.</p>
@@ -100,28 +104,27 @@
                         </a>
                         <a href="#" class="channel_my item">
                             <div class="profile_link">
-                                <img src="{{ url_for('static',filename='assets/faculty_assets/images/left-imgs/img-9.jpg' )}}" alt="">
+                                <img src="../../static/assets/faculty_assets/images/left-imgs/img-9.jpg" alt="">
                                 <div class="pd_content">
                                     <p> Your Membership Approved <strong>Upload Video</strong>.</p>
                                     <span class="nm_time">20 min ago</span>
                                 </div>
                             </div>
                         </a>
-                        <a class="vbm_btn" href="/faculty/notifications">View All <i
-                                class='uil uil-arrow-right'></i></a>
+                        <a class="vbm_btn" href="#">View All <i class='uil uil-arrow-right'></i></a>
                     </div>
                 </li>
                 <li class="ui dropdown">
                     <a href="#" class="opts_account">
-                        <img src="{{ url_for('static',filename='assets/faculty_assets/images/hd_dp.jpg')}}" alt="">
+                        <img src="../../static/assets/faculty_assets/images/hd_dp.jpg" alt="">
                     </a>
                     <div class="menu dropdown_account">
                         <div class="channel_my">
                             <div class="profile_link">
-                                <img src="{{ url_for('static',filename='/assets/faculty_assets/images/hd_dp.jpg')}}" alt="">
+                                <img src="../../static/assets/faculty_assets/images/hd_dp.jpg" alt="">
                                 <div class="pd_content">
                                     <div class="rhte85">
-                                        <h6>{{ name }}</h6>
+                                        <h6>Kuldeep Singh</h6>
                                         <div class="mef78" title="Verify">
                                             <i class='uil uil-check-circle'></i>
                                         </div>
@@ -129,23 +132,24 @@
 
                                 </div>
                             </div>
-                            <a href="/faculty/profile" class="dp_link_12">View Profile</a>
+                            <a href="/faculty/profile" class="dp_link_12">Profile</a>
                         </div>
                         <div class="night_mode_switch__btn">
                             <a href="#" id="night-mode" class="btn-night-mode">
-                                <i class="uil uil-moon"></i>Night mode
+                                <i class="uil uil-moon"></i> Night mode
                                 <span class="btn-night-mode-switch">
                                     <span class="uk-switch-button"></span>
                                 </span>
                             </a>
                         </div>
-                        <a href="/faculty/setting" class="item channel_item">Settings</a>
+                        <a href="/faculty/setting" class="item channel_item">Setting</a>
                         <a href="/logout" class="item channel_item">Sign Out</a>
                     </div>
                 </li>
             </ul>
         </div>
     </header>
+
     {% endblock %}
     <!-- End Navbar Area -->
 
@@ -228,7 +232,8 @@
     <!-- jQuery -->
     <script src="{{ url_for('static',filename='assets/faculty_assets/js/vertical-responsive-menu.min.js') }}"></script>
     <script src="{{ url_for('static',filename='assets/faculty_assets/js/jquery-3.3.1.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='assets/faculty_assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script
+        src="{{ url_for('static',filename='assets/faculty_assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static',filename='assets/faculty_assets/vendor/OwlCarousel/owl.carousel.js') }}"></script>
     <script src="{{ url_for('static',filename='assets/faculty_assets/vendor/semantic/semantic.min.js') }}"></script>
     <script src="{{ url_for('static',filename='assets/faculty_assets/js/custom1.js') }}"></script>

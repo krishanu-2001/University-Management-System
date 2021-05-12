@@ -138,7 +138,7 @@ class TestAdmin(flask_testing.TestCase):
             response= TestClient.get('/admin/course_student_assign')
             self.assert_template_used('error.html')
             response= TestClient.get('/admin/course_sem_delete')
-            self.assert_template_used('error.html')
+            self.assert_template_used('/faculty_panel/error_404.html')
 
             response= TestClient.get('/admin/add_faculty')
             self.assert_template_used('error.html')
@@ -213,7 +213,7 @@ class TestAdmin(flask_testing.TestCase):
             response= TestClient.get('/admin/course_student_assign')
             self.assert_template_used('error.html')
             response= TestClient.get('/admin/course_sem_delete')
-            self.assert_template_used('error.html')
+            self.assert_template_used('/faculty_panel/error_404.html')
 
             response= TestClient.get('/admin/add_faculty')
             self.assert_template_used('error.html')

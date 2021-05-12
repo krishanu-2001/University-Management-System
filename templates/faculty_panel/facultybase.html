@@ -9,9 +9,13 @@
 
     <title>UMS - Instructor Dashboard</title>
 
+    {% block links %}
+
+    {% endblock %}
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image"
-        href="{{ url_for('static',filename='assets/Admin_assets/img/favicon.ico') }}">
+        href="{{ url_for('static',filename='assets/admin_assets/img/favicon.ico') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,500" rel='stylesheet'>
 
@@ -51,7 +55,10 @@
     {% endblock %}
 </head>
 
+{% block bodydiv %}
+
 <body>
+    {% endblock %}
 
 
     {% block body %}
@@ -75,7 +82,7 @@
         <div class="header_right">
             <ul>
                 <li>
-                    <a href="/faculty/create_new_course" class="upload_btn">Create New Assignment</a>
+                    <a href="/faculty/create_new_assignmnent" class="upload_btn">Create New Assignment</a>
                 </li>
 
 
@@ -179,6 +186,9 @@
     <script src="../../static/assets/faculty_assets/vendor/semantic/semantic.min.js"></script>
     <script src="../../static/assets/faculty_assets/js/custom1.js"></script>
     <script src="../../static/assets/faculty_assets/js/night-mode.js"></script>
+    {% endblock %}
+
+    {% block somescript %}
     {% endblock %}
 
 </body>

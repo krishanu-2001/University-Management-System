@@ -1,39 +1,68 @@
 ﻿{% extends 'faculty_panel/facultybase.html' %}
 
-<!-- Sidebar -->
-{% block nav %}
+{% block links %}
+<link href='../../static/assets/faculty_assets/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+<link href="../../static/assets/faculty_assets/css/vertical-responsive-menu.min.css" rel="stylesheet">
+<link href="../../static/assets/faculty_assets/css/style.css" rel="stylesheet">
+<link href="../../static/assets/faculty_assets/css/responsive.css" rel="stylesheet">
+
+<link href="../../static/assets/faculty_assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link href="../../static/assets/faculty_assets/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+<link href="../../static/assets/faculty_assets/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+<link href="../../static/assets/faculty_assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../static/assets/faculty_assets/vendor/semantic/semantic.min.css">
 {% endblock %}
 
-{% block sidebar %}
-{% endblock %}
+{% block bodydiv %}
 
-{% block wrapper %}
+<body class="coming_soon_style">
+    {% endblock %}
 
-<div class="wrapper coming_soon_wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="cmtk_group">
-                    <div class="ct-logo">
-                        <a href="index.html"><img src="../../static/assets/faculty_assets/images/ct_logo.svg"
-                                alt=""></a>
-                    </div>
-                    <div class="cmtk_dt">
-                        <h1 class="title_404">404</h1>
-                        <h4 class="thnk_title1">The page you were looking for could not be found.</h4>
-                        <a href="/faculty/dashboard" class="bk_btn">Go To Homepage</a>
-                    </div>
-                    <div class="tc_footer_main">
+    <!-- Sidebar -->
+    {% block nav %}
+    {% endblock %}
 
-                        <div class="tc_footer_right">
-                            <p>© 2021 <strong>UMS - IIT Indore</strong>. All Rights Reserved.</p>
+    {% block sidebar %}
+    {% endblock %}
+
+    {% block wrapper %}
+
+    <div class="wrapper coming_soon_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cmtk_group">
+                        <div class="ct-logo">
+                            <a href="/"><img src="../../static/assets/faculty_assets/images/logo1.png" alt=""></a>
+                        </div>
+                        <div class="cmtk_dt">
+                            <h1 class="title_404">404</h1>
+                            <h4 class="thnk_title1">The page you were looking for could not be found.</h4>
+                            <a href="/" class="bk_btn">Go To Homepage</a>
+                        </div>
+                        <div class="tc_footer_main">
+
+                            <div class="tc_footer_right">
+                                <p>© 2021 <strong>UMS - IIT Indore</strong>. All Rights Reserved.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-{% endblock %}
-<!-- Page Wrapper -->
+    {% endblock %}
+    <!-- Page Wrapper -->
+
+
+    {% block script %}
+
+    <script src="../../static/assets/faculty_assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../../static/assets/faculty_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../static/assets/faculty_assets/vendor/OwlCarousel/owl.carousel.js"></script>
+    <script src="../../static/assets/faculty_assets/vendor/semantic/semantic.min.js"></script>
+    <script src="../../static/assets/faculty_assets/js/custom.js"></script>
+
+
+    {% endblock %}

@@ -1,67 +1,69 @@
-<style>
-  .input1{
-      outline: none;
-      border: 1px solid grey;
-      padding: 2px;
-      border-radius: 10px;
-      padding-left: 10px;
-  }
-
-</style>
-
 {% extends 'student_panel/dashboard.html' %}
+{% block style %}
+
+<style>
+    .input1 {
+        outline: none;
+        border: 1px solid grey;
+        padding: 2px;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+</style>
+{% endblock %}
+
 {% block submit_assignment_sidebar %}
-  <li class="page-active">
-{% endblock %}
-{% block dashboard_sidebar %}
-  <li>
-{% endblock %}
-{% block namebar %}
-{% endblock %}
-<!-- Page body -->
-{% block body1 %}
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
-          <h2>Pending Assignments</h2><br />
-          <div class="card card-table">
-              <div class="card-body">
-                  <div class="table-responsive">
-                      <table class="table table-hover table-center mb-0 datatable">
-                          <thead>
-                              <tr>
-                                  <th>Assign ID</th>
-                                  <th>Name</th>
-                                  <th>Faculty</th>
-                                  <th>Created_at</th>
-                                  <th>Question</th>
-                                  <th>Link</th>
-                                  <th class="text-right">Total marks</th>
-                              </tr>
-                          </thead>
-                          <tbody class="card-text fs-18">
-                              {% for item in list %}
-                              <tr>
-                                  <td><a href="/student/submit-assign/{{item[1]}}">{{item[1]}}</a></td>
-                                  <td>
-                                      <h2 class="card-text fs-18">
-                                          <a>{{item[7]}}</a>
-                                      </h2>
-                                  </td>
-                                  <td>{{item[8]}}</td>
-                                  <td>{{item[4]}}</td>
-                                  <td>{{item[2]}}</td>
-                                  <td>{{item[3]}}</td>
-                                  <td class="text-right">{{item[6]}}</td>
-                              </tr>
-                              {% endfor %}
-                          </tbody>
-                      </table>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  </div>
-{% endblock %}
-<!-- /Page Wrapper -->
+<li class="page-active">
+    {% endblock %}
+    {% block dashboard_sidebar %}
+<li>
+    {% endblock %}
+    {% block namebar %}
+    {% endblock %}
+    <!-- Page body -->
+    {% block body1 %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Pending Assignments</h2><br />
+                <div class="card card-table">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                        <th>Assign ID</th>
+                                        <th>Name</th>
+                                        <th>Faculty</th>
+                                        <th>Created_at</th>
+                                        <th>Question</th>
+                                        <th>Link</th>
+                                        <th class="text-right">Total marks</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="card-text fs-18">
+                                    {% for item in list %}
+                                    <tr>
+                                        <td><a href="/student/submit-assign/{{item[1]}}">{{item[1]}}</a></td>
+                                        <td>
+                                            <h2 class="card-text fs-18">
+                                                <a>{{item[7]}}</a>
+                                            </h2>
+                                        </td>
+                                        <td>{{item[8]}}</td>
+                                        <td>{{item[4]}}</td>
+                                        <td>{{item[2]}}</td>
+                                        <td>{{item[3]}}</td>
+                                        <td class="text-right">{{item[6]}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    <!-- /Page Wrapper -->
