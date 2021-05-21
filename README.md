@@ -72,7 +72,23 @@ Link for Instruction Manual: [Instruction Manual](https://github.com/ronnie-36/U
       Use python 3.7 u
 
       The application runs on localhost:5000
+
+### Azure functions (Cron-job)
+Integrated Azure functions with mysql database to run timeTriggered ie, **cron jobs**.   
+
+      Steps to run
       
+      npm i  
+      
+      Install VSCODE Extension for Azure-functions  
+      
+      npm i -g azurite
+      
+      run azurite --silent debug mode  
+      
+      func host start
+      
+
 ### Testing  
 
 #### Libraries used 
