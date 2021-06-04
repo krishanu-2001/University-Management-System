@@ -1,5 +1,6 @@
-mysql_host: 'localhost'
+mysql_host: 'mysql'
 mysql_user: 'root'
 # Enter your password in field below
-mysql_password: 'password'
+mysql_port: 3306
+mysql_password: 'secret'
 mysql_db: 'university'

@@ -34,4 +34,5 @@ class DevConfig(Config):
     MYSQL_USER = db['mysql_user']
     MYSQL_PASSWORD = db['mysql_password']
     MYSQL_DB = db['mysql_db']
+    MYSQL_PORT = db['mysql_port']
     
