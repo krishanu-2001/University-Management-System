@@ -1,0 +1,32 @@
+version: "3.7"
+services: 
+# set of sevrvices connected to the same network
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - ums-mysql-data:/var/lib/mysql:rw
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+    ports: 
+      - 12345:3306
+    environment: 
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: university
+
+  app:
+    build: .
+    links:
+      - mysql
+    ports: 
+      - 5000:5000
+    working_dir: /univ
+    volumes: 
+      - ./:/univ
+
+volumes:
+  ums-mysql-data:
+
+# Instructions
+# Run mysql on host
+# mysql -h'127.0.0.1' -P12345 -psecret -uroot
+# To delete volumes to update mysql
+# docker-compose down -v
