@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/krishanu-2001/University-Management-System.svg?branch=main)](https://travis-ci.com/krishanu-2001/University-Management-System) 
+
 # University-Management-System
 #### This is Course project for CS-258. Project Number - P012 
 "University Management System" is a website with main goal to inculcate technology in the process of managing University data and activites. "University Management System" is a platform where the students can access their academic information and interact with faculty in order to streamline the daily activities of an educational institute.<br>
